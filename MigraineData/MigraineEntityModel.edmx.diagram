@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="297cdf3db3c04bd3b9fbfac409addff3" Name="Diagram1">
+        <EntityTypeShape EntityType="MigraineDBModel.drink" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.food" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.med" Width="1.5" PointX="3.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.migraine" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.migraine_drinks" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.migraine_foods" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.migraine_location" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.migraine_meds" Width="1.5" PointX="6" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.migraine_physical_activities" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.painlocation" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MigraineDBModel.physicalactivity" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___drink__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___food___1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___med_i__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___migra__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___migra__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___migra__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___migra__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___migra__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___painl__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="MigraineDBModel.FK__migraine___physi__31EC6D26" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

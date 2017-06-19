@@ -1,0 +1,10 @@
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\bin\Debug\MigraineData.dll.config
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\bin\Debug\MigraineData.dll
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\bin\Debug\MigraineData.pdb
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\bin\Debug\EntityFramework.dll
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\bin\Debug\EntityFramework.SqlServer.dll
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\bin\Debug\EntityFramework.xml
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\bin\Debug\EntityFramework.SqlServer.xml
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\obj\Debug\MigraineData.csprojResolveAssemblyReference.cache
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\obj\Debug\MigraineData.dll
+E:\Universidad\2 Intersemestral\Arquitectura de software\Proyecto migrania\NetMigraineProject\Migraine\MigraineData\obj\Debug\MigraineData.pdb

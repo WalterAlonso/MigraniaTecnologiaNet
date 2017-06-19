@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MigraineDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="drink">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="food">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="med">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="migraine">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="pain_level" Type="int" Nullable="false" />
+    <Property Name="audio_file" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="migraine_drinks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="migraine_id" Type="int" Nullable="false" />
+    <Property Name="drink_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="migraine_foods">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="migraine_id" Type="int" Nullable="false" />
+    <Property Name="food_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="migraine_location">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="migraine_id" Type="int" Nullable="false" />
+    <Property Name="painlocation_id" Type="int" Nullable="false" />
+    <Property Name="intensity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="migraine_meds">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="migraine_id" Type="int" Nullable="false" />
+    <Property Name="med_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="migraine_physical_activities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="migraine_id" Type="int" Nullable="false" />
+    <Property Name="physicalactivity_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="painlocation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="physicalactivity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__migraine___drink__1920BF5C">
+    <End Role="drink" Type="Self.drink" Multiplicity="1" />
+    <End Role="migraine_drinks" Type="Self.migraine_drinks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="drink">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_drinks">
+        <PropertyRef Name="drink_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___food___1DE57479">
+    <End Role="food" Type="Self.food" Multiplicity="1" />
+    <End Role="migraine_foods" Type="Self.migraine_foods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="food">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_foods">
+        <PropertyRef Name="food_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___med_i__2B3F6F97">
+    <End Role="med" Type="Self.med" Multiplicity="1" />
+    <End Role="migraine_meds" Type="Self.migraine_meds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="med">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_meds">
+        <PropertyRef Name="med_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___migra__182C9B23">
+    <End Role="migraine" Type="Self.migraine" Multiplicity="1" />
+    <End Role="migraine_drinks" Type="Self.migraine_drinks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="migraine">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_drinks">
+        <PropertyRef Name="migraine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___migra__1CF15040">
+    <End Role="migraine" Type="Self.migraine" Multiplicity="1" />
+    <End Role="migraine_foods" Type="Self.migraine_foods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="migraine">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_foods">
+        <PropertyRef Name="migraine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___migra__239E4DCF">
+    <End Role="migraine" Type="Self.migraine" Multiplicity="1" />
+    <End Role="migraine_location" Type="Self.migraine_location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="migraine">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_location">
+        <PropertyRef Name="migraine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___migra__2A4B4B5E">
+    <End Role="migraine" Type="Self.migraine" Multiplicity="1" />
+    <End Role="migraine_meds" Type="Self.migraine_meds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="migraine">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_meds">
+        <PropertyRef Name="migraine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___migra__30F848ED">
+    <End Role="migraine" Type="Self.migraine" Multiplicity="1" />
+    <End Role="migraine_physical_activities" Type="Self.migraine_physical_activities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="migraine">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_physical_activities">
+        <PropertyRef Name="migraine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___painl__24927208">
+    <End Role="painlocation" Type="Self.painlocation" Multiplicity="1" />
+    <End Role="migraine_location" Type="Self.migraine_location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="painlocation">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_location">
+        <PropertyRef Name="painlocation_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__migraine___physi__31EC6D26">
+    <End Role="physicalactivity" Type="Self.physicalactivity" Multiplicity="1" />
+    <End Role="migraine_physical_activities" Type="Self.migraine_physical_activities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="physicalactivity">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="migraine_physical_activities">
+        <PropertyRef Name="physicalactivity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MigraineDBModelStoreContainer">
+    <EntitySet Name="drink" EntityType="Self.drink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="food" EntityType="Self.food" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="med" EntityType="Self.med" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="migraine" EntityType="Self.migraine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="migraine_drinks" EntityType="Self.migraine_drinks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="migraine_foods" EntityType="Self.migraine_foods" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="migraine_location" EntityType="Self.migraine_location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="migraine_meds" EntityType="Self.migraine_meds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="migraine_physical_activities" EntityType="Self.migraine_physical_activities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="painlocation" EntityType="Self.painlocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="physicalactivity" EntityType="Self.physicalactivity" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__migraine___drink__1920BF5C" Association="Self.FK__migraine___drink__1920BF5C">
+      <End Role="drink" EntitySet="drink" />
+      <End Role="migraine_drinks" EntitySet="migraine_drinks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___food___1DE57479" Association="Self.FK__migraine___food___1DE57479">
+      <End Role="food" EntitySet="food" />
+      <End Role="migraine_foods" EntitySet="migraine_foods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___med_i__2B3F6F97" Association="Self.FK__migraine___med_i__2B3F6F97">
+      <End Role="med" EntitySet="med" />
+      <End Role="migraine_meds" EntitySet="migraine_meds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___migra__182C9B23" Association="Self.FK__migraine___migra__182C9B23">
+      <End Role="migraine" EntitySet="migraine" />
+      <End Role="migraine_drinks" EntitySet="migraine_drinks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___migra__1CF15040" Association="Self.FK__migraine___migra__1CF15040">
+      <End Role="migraine" EntitySet="migraine" />
+      <End Role="migraine_foods" EntitySet="migraine_foods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___migra__239E4DCF" Association="Self.FK__migraine___migra__239E4DCF">
+      <End Role="migraine" EntitySet="migraine" />
+      <End Role="migraine_location" EntitySet="migraine_location" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___migra__2A4B4B5E" Association="Self.FK__migraine___migra__2A4B4B5E">
+      <End Role="migraine" EntitySet="migraine" />
+      <End Role="migraine_meds" EntitySet="migraine_meds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___migra__30F848ED" Association="Self.FK__migraine___migra__30F848ED">
+      <End Role="migraine" EntitySet="migraine" />
+      <End Role="migraine_physical_activities" EntitySet="migraine_physical_activities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___painl__24927208" Association="Self.FK__migraine___painl__24927208">
+      <End Role="painlocation" EntitySet="painlocation" />
+      <End Role="migraine_location" EntitySet="migraine_location" />
+    </AssociationSet>
+    <AssociationSet Name="FK__migraine___physi__31EC6D26" Association="Self.FK__migraine___physi__31EC6D26">
+      <End Role="physicalactivity" EntitySet="physicalactivity" />
+      <End Role="migraine_physical_activities" EntitySet="migraine_physical_activities" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

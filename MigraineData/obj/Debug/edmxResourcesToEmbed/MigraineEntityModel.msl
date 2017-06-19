@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MigraineDBModelStoreContainer" CdmEntityContainer="MigraineDBEntities">
+    <EntitySetMapping Name="drink">
+      <EntityTypeMapping TypeName="MigraineDBModel.drink">
+        <MappingFragment StoreEntitySet="drink">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="food">
+      <EntityTypeMapping TypeName="MigraineDBModel.food">
+        <MappingFragment StoreEntitySet="food">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="med">
+      <EntityTypeMapping TypeName="MigraineDBModel.med">
+        <MappingFragment StoreEntitySet="med">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migraine">
+      <EntityTypeMapping TypeName="MigraineDBModel.migraine">
+        <MappingFragment StoreEntitySet="migraine">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="pain_level" ColumnName="pain_level" />
+          <ScalarProperty Name="audio_file" ColumnName="audio_file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migraine_drinks">
+      <EntityTypeMapping TypeName="MigraineDBModel.migraine_drinks">
+        <MappingFragment StoreEntitySet="migraine_drinks">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="migraine_id" ColumnName="migraine_id" />
+          <ScalarProperty Name="drink_id" ColumnName="drink_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migraine_foods">
+      <EntityTypeMapping TypeName="MigraineDBModel.migraine_foods">
+        <MappingFragment StoreEntitySet="migraine_foods">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="migraine_id" ColumnName="migraine_id" />
+          <ScalarProperty Name="food_id" ColumnName="food_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migraine_location">
+      <EntityTypeMapping TypeName="MigraineDBModel.migraine_location">
+        <MappingFragment StoreEntitySet="migraine_location">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="migraine_id" ColumnName="migraine_id" />
+          <ScalarProperty Name="painlocation_id" ColumnName="painlocation_id" />
+          <ScalarProperty Name="intensity" ColumnName="intensity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migraine_meds">
+      <EntityTypeMapping TypeName="MigraineDBModel.migraine_meds">
+        <MappingFragment StoreEntitySet="migraine_meds">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="migraine_id" ColumnName="migraine_id" />
+          <ScalarProperty Name="med_id" ColumnName="med_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migraine_physical_activities">
+      <EntityTypeMapping TypeName="MigraineDBModel.migraine_physical_activities">
+        <MappingFragment StoreEntitySet="migraine_physical_activities">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="migraine_id" ColumnName="migraine_id" />
+          <ScalarProperty Name="physicalactivity_id" ColumnName="physicalactivity_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="painlocation">
+      <EntityTypeMapping TypeName="MigraineDBModel.painlocation">
+        <MappingFragment StoreEntitySet="painlocation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="physicalactivity">
+      <EntityTypeMapping TypeName="MigraineDBModel.physicalactivity">
+        <MappingFragment StoreEntitySet="physicalactivity">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

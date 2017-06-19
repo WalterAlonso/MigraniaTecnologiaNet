@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migraine", "Migraine\Migraine.csproj", "{AEF22C0E-E1A7-41B0-B29D-021B70345B4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migraine.Tests", "Migraine.Tests\Migraine.Tests.csproj", "{F3AD5E7E-E6BB-4681-93EC-1BAD23EC379D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigraineData", "MigraineData\MigraineData.csproj", "{D1285C69-532F-45C8-9D26-1037C31470DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEF22C0E-E1A7-41B0-B29D-021B70345B4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF22C0E-E1A7-41B0-B29D-021B70345B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF22C0E-E1A7-41B0-B29D-021B70345B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF22C0E-E1A7-41B0-B29D-021B70345B4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3AD5E7E-E6BB-4681-93EC-1BAD23EC379D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AD5E7E-E6BB-4681-93EC-1BAD23EC379D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AD5E7E-E6BB-4681-93EC-1BAD23EC379D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AD5E7E-E6BB-4681-93EC-1BAD23EC379D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1285C69-532F-45C8-9D26-1037C31470DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1285C69-532F-45C8-9D26-1037C31470DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1285C69-532F-45C8-9D26-1037C31470DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1285C69-532F-45C8-9D26-1037C31470DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
